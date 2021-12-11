@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
+import 'package:flutter_bluetooth_serial_example/analogpage.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 import './BackgroundCollectedPage.dart';
@@ -320,7 +321,8 @@ class _MainPage extends State<MainPage> {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) {
-          return ChatPage(server: server);
+          // return ChatPage(server: server);
+          return AnalogPage(server: server);
         },
       ),
     );

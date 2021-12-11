@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 
 import './BluetoothDeviceListEntry.dart';
+import 'analogpage.dart';
 
 class SelectBondedDevicePage extends StatefulWidget {
   /// If true, on page start there is performed discovery upon the bonded devices.
@@ -116,6 +117,13 @@ class _SelectBondedDevicePage extends State<SelectBondedDevicePage> {
               enabled: _device.availability == _DeviceAvailability.yes,
               onTap: () {
                 Navigator.of(context).pop(_device.device);
+                // Navigator.push<void>(
+                //   context,
+                //   MaterialPageRoute<void>(
+                //     builder: (BuildContext context) =>
+                //         const AnalogPage(_device.device),
+                //   ),
+                // );
               },
             ))
         .toList();
